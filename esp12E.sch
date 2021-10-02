@@ -1,0 +1,465 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L RF_Module:ESP-12E U1
+U 1 1 61587DF9
+P 2500 1900
+F 0 "U1" H 2750 2850 50  0000 C CNN
+F 1 "ESP-12E" H 2900 2700 50  0000 C CNN
+F 2 "RF_Module:ESP-12E" H 2500 1900 50  0001 C CNN
+F 3 "http://wiki.ai-thinker.com/_media/esp8266/esp8266_series_modules_user_manual_v1.1.pdf" H 2150 2000 50  0001 C CNN
+	1    2500 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0101
+U 1 1 61588E75
+P 2500 1100
+F 0 "#PWR0101" H 2500 950 50  0001 C CNN
+F 1 "+3.3V" H 2515 1273 50  0000 C CNN
+F 2 "" H 2500 1100 50  0001 C CNN
+F 3 "" H 2500 1100 50  0001 C CNN
+	1    2500 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 61589A98
+P 2500 2600
+F 0 "#PWR0102" H 2500 2350 50  0001 C CNN
+F 1 "GND" H 2505 2427 50  0000 C CNN
+F 2 "" H 2500 2600 50  0001 C CNN
+F 3 "" H 2500 2600 50  0001 C CNN
+	1    2500 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 61589F8F
+P 1400 1100
+F 0 "R1" H 1470 1146 50  0000 L CNN
+F 1 "10k" H 1470 1055 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 1330 1100 50  0001 C CNN
+F 3 "~" H 1400 1100 50  0001 C CNN
+	1    1400 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 1250 1400 1300
+Text Label 1400 1300 2    50   ~ 0
+ESP_RESET
+$Comp
+L power:+3.3V #PWR0103
+U 1 1 6158B210
+P 1400 950
+F 0 "#PWR0103" H 1400 800 50  0001 C CNN
+F 1 "+3.3V" H 1415 1123 50  0000 C CNN
+F 2 "" H 1400 950 50  0001 C CNN
+F 3 "" H 1400 950 50  0001 C CNN
+	1    1400 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 6158B630
+P 1400 1450
+F 0 "C1" H 1515 1496 50  0000 L CNN
+F 1 "C" H 1515 1405 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 1438 1300 50  0001 C CNN
+F 3 "~" H 1400 1450 50  0001 C CNN
+	1    1400 1450
+	1    0    0    -1  
+$EndComp
+Connection ~ 1400 1300
+$Comp
+L power:GND #PWR0104
+U 1 1 6158BA39
+P 1400 1600
+F 0 "#PWR0104" H 1400 1350 50  0001 C CNN
+F 1 "GND" H 1405 1427 50  0000 C CNN
+F 2 "" H 1400 1600 50  0001 C CNN
+F 3 "" H 1400 1600 50  0001 C CNN
+	1    1400 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 1300 1900 1300
+$Comp
+L Device:R R2
+U 1 1 6159040D
+P 1750 1000
+F 0 "R2" H 1820 1046 50  0000 L CNN
+F 1 "10k" H 1820 955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 1680 1000 50  0001 C CNN
+F 3 "~" H 1750 1000 50  0001 C CNN
+	1    1750 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0105
+U 1 1 615909BD
+P 1750 850
+F 0 "#PWR0105" H 1750 700 50  0001 C CNN
+F 1 "+3.3V" H 1765 1023 50  0000 C CNN
+F 2 "" H 1750 850 50  0001 C CNN
+F 3 "" H 1750 850 50  0001 C CNN
+	1    1750 850 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 1150 1750 1500
+Wire Wire Line
+	1750 1500 1900 1500
+$Comp
+L Connector_Generic:Conn_01x06 FLASH1
+U 1 1 61591A20
+P 1900 2900
+F 0 "FLASH1" H 1980 2892 50  0000 L CNN
+F 1 "Conn_01x06" H 1980 2801 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 1900 2900 50  0001 C CNN
+F 3 "~" H 1900 2900 50  0001 C CNN
+	1    1900 2900
+	1    0    0    -1  
+$EndComp
+Text Label 1700 2700 2    50   ~ 0
+FLASH_DTR
+Text Label 1700 2800 2    50   ~ 0
+FLASH_RX
+Text Label 1700 2900 2    50   ~ 0
+FLASH_TX
+Text Label 1700 3000 2    50   ~ 0
+FLASH_VCC
+Text Label 1700 3100 2    50   ~ 0
+FLASH_CTS
+Text Label 1700 3200 2    50   ~ 0
+FLASH_GND
+Text Label 3100 1400 0    50   ~ 0
+FLASH_RX
+Text Label 3100 1600 0    50   ~ 0
+FLASH_TX
+$Comp
+L power:GND #PWR0106
+U 1 1 6159320D
+P 1600 3250
+F 0 "#PWR0106" H 1600 3000 50  0001 C CNN
+F 1 "GND" H 1605 3077 50  0000 C CNN
+F 2 "" H 1600 3250 50  0001 C CNN
+F 3 "" H 1600 3250 50  0001 C CNN
+	1    1600 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 3250 1600 3200
+Wire Wire Line
+	1600 3200 1700 3200
+$Comp
+L Regulator_Linear:AMS1117-3.3 U2
+U 1 1 61594E3A
+P 4400 2000
+F 0 "U2" H 4400 2242 50  0000 C CNN
+F 1 "AMS1117-3.3" H 4400 2151 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 4400 2200 50  0001 C CNN
+F 3 "http://www.advanced-monolithic.com/pdf/ds1117.pdf" H 4500 1750 50  0001 C CNN
+	1    4400 2000
+	1    0    0    -1  
+$EndComp
+Text Label 3900 2000 2    50   ~ 0
+Vin
+$Comp
+L Device:C C2
+U 1 1 61597417
+P 3900 2150
+F 0 "C2" H 4015 2196 50  0000 L CNN
+F 1 "10uF" H 4015 2105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3938 2000 50  0001 C CNN
+F 3 "~" H 3900 2150 50  0001 C CNN
+	1    3900 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 61597772
+P 4900 2150
+F 0 "C3" H 5015 2196 50  0000 L CNN
+F 1 "22uF" H 5015 2105 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 4938 2000 50  0001 C CNN
+F 3 "~" H 4900 2150 50  0001 C CNN
+	1    4900 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 61597C5C
+P 3900 2300
+F 0 "#PWR0107" H 3900 2050 50  0001 C CNN
+F 1 "GND" H 3905 2127 50  0000 C CNN
+F 2 "" H 3900 2300 50  0001 C CNN
+F 3 "" H 3900 2300 50  0001 C CNN
+	1    3900 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 6159806B
+P 4400 2300
+F 0 "#PWR0108" H 4400 2050 50  0001 C CNN
+F 1 "GND" H 4405 2127 50  0000 C CNN
+F 2 "" H 4400 2300 50  0001 C CNN
+F 3 "" H 4400 2300 50  0001 C CNN
+	1    4400 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 615983F8
+P 4900 2300
+F 0 "#PWR0109" H 4900 2050 50  0001 C CNN
+F 1 "GND" H 4905 2127 50  0000 C CNN
+F 2 "" H 4900 2300 50  0001 C CNN
+F 3 "" H 4900 2300 50  0001 C CNN
+	1    4900 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 2000 4700 2000
+Wire Wire Line
+	4100 2000 3900 2000
+$Comp
+L power:+3.3V #PWR0110
+U 1 1 615990CF
+P 4900 2000
+F 0 "#PWR0110" H 4900 1850 50  0001 C CNN
+F 1 "+3.3V" H 4915 2173 50  0000 C CNN
+F 2 "" H 4900 2000 50  0001 C CNN
+F 3 "" H 4900 2000 50  0001 C CNN
+	1    4900 2000
+	1    0    0    -1  
+$EndComp
+Connection ~ 4900 2000
+$Comp
+L Jumper:SolderJumper_3_Bridged12 JP1
+U 1 1 6159CD62
+P 1050 3000
+F 0 "JP1" V 1004 3068 50  0000 L CNN
+F 1 "SolderJumper_3_Bridged12" H 250 3250 50  0000 L CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged2Bar12_RoundedPad1.0x1.5mm" H 1050 3000 50  0001 C CNN
+F 3 "~" H 1050 3000 50  0001 C CNN
+	1    1050 3000
+	0    -1   1    0   
+$EndComp
+$Comp
+L power:+3.3V #PWR0111
+U 1 1 6159E2D2
+P 1050 2800
+F 0 "#PWR0111" H 1050 2650 50  0001 C CNN
+F 1 "+3.3V" H 1065 2973 50  0000 C CNN
+F 2 "" H 1050 2800 50  0001 C CNN
+F 3 "" H 1050 2800 50  0001 C CNN
+	1    1050 2800
+	1    0    0    -1  
+$EndComp
+Text Label 950  3300 2    50   ~ 0
+Vin
+Wire Wire Line
+	950  3300 1050 3300
+Wire Wire Line
+	1050 3300 1050 3200
+Wire Wire Line
+	1200 3000 1700 3000
+$Comp
+L Switch:SW_MEC_5E RESET1
+U 1 1 615A7F23
+P 950 1550
+F 0 "RESET1" H 950 1350 50  0000 C CNN
+F 1 "SW_MEC_5E" H 1000 1450 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_TH_Tactile_Omron_B3F-10xx" H 950 1850 50  0001 C CNN
+F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=1371" H 950 1850 50  0001 C CNN
+	1    950  1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1150 1550 1150 1450
+Wire Wire Line
+	1150 1300 1400 1300
+Connection ~ 1150 1450
+Wire Wire Line
+	1150 1450 1150 1300
+$Comp
+L power:GND #PWR0112
+U 1 1 615A8FC4
+P 750 1700
+F 0 "#PWR0112" H 750 1450 50  0001 C CNN
+F 1 "GND" H 755 1527 50  0000 C CNN
+F 2 "" H 750 1700 50  0001 C CNN
+F 3 "" H 750 1700 50  0001 C CNN
+	1    750  1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	750  1450 750  1550
+Connection ~ 750  1550
+Wire Wire Line
+	750  1550 750  1700
+$Comp
+L Device:R R5
+U 1 1 615AA200
+P 3600 1100
+F 0 "R5" H 3670 1146 50  0000 L CNN
+F 1 "10k" H 3670 1055 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3530 1100 50  0001 C CNN
+F 3 "~" H 3600 1100 50  0001 C CNN
+	1    3600 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 615AAA9B
+P 3300 1000
+F 0 "R3" H 3370 1046 50  0000 L CNN
+F 1 "10k" H 3370 955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3230 1000 50  0001 C CNN
+F 3 "~" H 3300 1000 50  0001 C CNN
+	1    3300 1000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 1150 3300 1300
+Wire Wire Line
+	3300 1300 3100 1300
+Wire Wire Line
+	3600 1250 3600 1500
+Wire Wire Line
+	3600 1500 3100 1500
+$Comp
+L power:+3.3V #PWR0113
+U 1 1 615ABD9C
+P 3300 800
+F 0 "#PWR0113" H 3300 650 50  0001 C CNN
+F 1 "+3.3V" H 3315 973 50  0000 C CNN
+F 2 "" H 3300 800 50  0001 C CNN
+F 3 "" H 3300 800 50  0001 C CNN
+	1    3300 800 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 800  3300 850 
+Wire Wire Line
+	3300 800  3600 800 
+Wire Wire Line
+	3600 800  3600 950 
+Connection ~ 3300 800 
+$Comp
+L Device:R R4
+U 1 1 615AD24D
+P 3450 2400
+F 0 "R4" H 3520 2446 50  0000 L CNN
+F 1 "10k" H 3520 2355 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3380 2400 50  0001 C CNN
+F 3 "~" H 3450 2400 50  0001 C CNN
+	1    3450 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 2250 3450 2200
+Wire Wire Line
+	3450 2200 3100 2200
+$Comp
+L power:GND #PWR0114
+U 1 1 615AE14B
+P 3450 2650
+F 0 "#PWR0114" H 3450 2400 50  0001 C CNN
+F 1 "GND" H 3455 2477 50  0000 C CNN
+F 2 "" H 3450 2650 50  0001 C CNN
+F 3 "" H 3450 2650 50  0001 C CNN
+	1    3450 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 2650 3450 2550
+$Comp
+L Switch:SW_MEC_5E FLASH2
+U 1 1 615B40CB
+P 4150 1400
+F 0 "FLASH2" H 4150 1200 50  0000 C CNN
+F 1 "SW_MEC_5E" H 4200 1300 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_TH_Tactile_Omron_B3F-10xx" H 4150 1700 50  0001 C CNN
+F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=1371" H 4150 1700 50  0001 C CNN
+	1    4150 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 1300 3950 1300
+Wire Wire Line
+	3950 1300 3950 1400
+Connection ~ 3300 1300
+Connection ~ 3950 1300
+Wire Wire Line
+	4350 1400 4350 1300
+$Comp
+L power:GND #PWR0115
+U 1 1 615C09B2
+P 4650 1500
+F 0 "#PWR0115" H 4650 1250 50  0001 C CNN
+F 1 "GND" H 4655 1327 50  0000 C CNN
+F 2 "" H 4650 1500 50  0001 C CNN
+F 3 "" H 4650 1500 50  0001 C CNN
+	1    4650 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 1500 4650 1300
+Wire Wire Line
+	4650 1300 4350 1300
+Connection ~ 4350 1300
+Text Label 3100 1700 0    50   ~ 0
+GPIO4
+Text Label 3100 1800 0    50   ~ 0
+GPIO5
+Text Label 3100 1900 0    50   ~ 0
+GPIO12
+Text Label 3100 2000 0    50   ~ 0
+GPIO13
+Text Label 3100 2100 0    50   ~ 0
+GPIO14
+Text Label 3100 2200 0    50   ~ 0
+GPIO15
+Text Label 3100 2300 0    50   ~ 0
+GPIO16
+Text Label 3300 1300 0    50   ~ 0
+GPIO0
+Text Label 3100 1500 0    50   ~ 0
+GPIO2
+Text Label 1900 1700 2    50   ~ 0
+ESP_ADC
+Text Label 1900 1900 2    50   ~ 0
+ESP_CSO
+Text Label 1900 2000 2    50   ~ 0
+ESP_MISO
+Text Label 1900 2100 2    50   ~ 0
+GPIO9
+Text Label 1900 2200 2    50   ~ 0
+GPIO10
+Text Label 1900 2300 2    50   ~ 0
+ESP_MOSI
+Text Label 1900 2400 2    50   ~ 0
+ESP_SCLK
+Text Label 3550 800  2    50   ~ 0
+3.3
+Text Label 4650 1300 2    50   ~ 0
+GND
+Text Label 1750 1250 3    50   ~ 0
+ESP_EN
+$EndSCHEMATC
